@@ -1,0 +1,42 @@
+---
+title: "HW 6"
+author: "Chloe Freeland"
+format: pdf
+editor: visual
+---
+
+## Exercise 2
+
+```{r}
+t1 <- matrix(c(135, 151, 8, 8, 14, 15, 11, 12), 
+             byrow = T, nrow = 4, ncol = 2)
+
+t1
+
+chisq.test(t1)
+fisher.test(t1)
+```
+For the chi-squared test, the null hypothesis is that there is no association between location of hospital ward and whether Santa visits. The alternative hypothesis is that there is no association between location of hospital ward and whether Santa visits. The distribution of the test statistic under the null is a chi-squared distribution. The value of the test statistic is 0.057962. The p-value is 0.9964. Assigning our alpha significance to 0.05, our p-value is superior to alpha: we have insufficient evidence to suggest that there is no association between location of hospital ward and whether Santa visits, so we fail to reject the null.
+
+For the Fisher's Exact Test, the null hypothesis is that there is no association between location of hospital ward and whether Santa visits. The alternative hypothesis is that there is no association between location of hospital ward and whether Santa visits. The p-value is 1. With an alpha of 0.05, we thus have a p-value superior to alpha: we have insufficient evidence to suggest that there is no association between location of hospital ward and whether Santa visits, so we fail to reject the null.
+
+## Exercise 3
+
+The p-value does not change when alpha changes from 0.05 to 0.01 because performing a hypothesis test does not involve alpha. 
+If we knew for a fact that the alternative hypothesis was true, the power of their hypothesis test would increase as we would know that there was sufficient evidence to suggest a difference in mean BMI between low- and high-steppers, increasing the probability of rejecting the null hypothesis when it is false.
+
+## Exercise 4
+```{r}
+
+```
+use the formula for n to find sample size
+
+## Exercise 5
+
+Holding alpha, the population variability, and the power of our intended test constant, we would need fewer participants in order to detect a larger difference between the groups.
+
+Holding the effect size, the population variability, and the power of your intended test constant, we would need fewer participants in order to achieve a lower type 1 error rate under the null hypothesis.
+
+Holding alpha, the effect size, and the power of your intended test constant, we would need more participants if in fact the population variability was higher than expected.
+
+Holding alpha, the effect size, and the population variability constant, we would need more participants in order to achieve higher power to detect a difference.
