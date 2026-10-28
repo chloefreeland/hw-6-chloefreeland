@@ -26,16 +26,13 @@ The p-value does not change when alpha changes from 0.05 to 0.01 because perform
 If we knew for a fact that the alternative hypothesis was true, the power of their hypothesis test would increase as we would know that there was sufficient evidence to suggest a difference in mean BMI between low- and high-steppers, increasing the probability of rejecting the null hypothesis when it is false.
 
 ## Exercise 4
-```{r}
-
-```
-use the formula for n to find sample size
+To answer this question, we use the confidence interval for mu where the standard deviation is known. We know that the length of the confidence interval is equal to two times the confidence multiplier which is 2z*1/(alpha/2)xsigma/(square root of n). In solving for n, we obtain (2z*(sigma))^2. We would thus want n to be at least as big as L, which corresponds to our confidence interval length, because, to obtain a smaller confidence interval, we would need a larger value for n. 
 
 ## Exercise 5
 
 Holding alpha, the population variability, and the power of our intended test constant, we would need fewer participants in order to detect a larger difference between the groups.
 
-Holding the effect size, the population variability, and the power of your intended test constant, we would need fewer participants in order to achieve a lower type 1 error rate under the null hypothesis.
+Holding the effect size, the population variability, and the power of your intended test constant, we would need more participants in order to achieve a lower type 1 error rate under the null hypothesis.
 
 Holding alpha, the effect size, and the power of your intended test constant, we would need more participants if in fact the population variability was higher than expected.
 
