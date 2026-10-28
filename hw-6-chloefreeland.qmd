@@ -5,10 +5,12 @@ format: pdf
 editor: visual
 ---
 
+I did not use AI to complete this assignment. 
+
 ## Exercise 2
 
 ```{r}
-t1 <- matrix(c(135, 151, 8, 8, 14, 15, 11, 12), 
+t1 <- matrix(c(135, 16, 8, 0, 14, 1, 11, 1), 
              byrow = T, nrow = 4, ncol = 2)
 
 t1
@@ -16,20 +18,19 @@ t1
 chisq.test(t1)
 fisher.test(t1)
 ```
-For the chi-squared test, the null hypothesis is that there is no association between location of hospital ward and whether Santa visits. The alternative hypothesis is that there is no association between location of hospital ward and whether Santa visits. The distribution of the test statistic under the null is a chi-squared distribution. The value of the test statistic is 0.057962. The p-value is 0.9964. Assigning our alpha significance to 0.05, our p-value is superior to alpha: we have insufficient evidence to suggest that there is no association between location of hospital ward and whether Santa visits, so we fail to reject the null.
+For the chi-squared test, the null hypothesis is that there is no association between location of hospital ward and whether Santa visits. The alternative hypothesis is that there is an association between location of hospital ward and whether Santa visits. The distribution of the test statistic under the null hypothesis is a chi-squared distribution with 3 degrees of freedom. The value of the test statistic is 1.1833. The p-value is 0.757. Assigning our alpha significance to 0.05, our p-value is superior to alpha: we fail to reject the null hypothesis as we have insufficient evidence to suggest that there is an association between location of hospital ward and whether Santa visits.
 
-For the Fisher's Exact Test, the null hypothesis is that there is no association between location of hospital ward and whether Santa visits. The alternative hypothesis is that there is no association between location of hospital ward and whether Santa visits. The p-value is 1. With an alpha of 0.05, we thus have a p-value superior to alpha: we have insufficient evidence to suggest that there is no association between location of hospital ward and whether Santa visits, so we fail to reject the null.
+For the Fisher's Exact Test, the null hypothesis is that there is no association between location of hospital ward and whether Santa visits. The alternative hypothesis is that there is an association between location of hospital ward and whether Santa visits. The p-value is 1. Its distribution under the null hypothesis is a hypergeometric distribution. With an alpha of 0.05, we thus have a p-value superior to alpha: we fail to reject the null hypothesis as we have insufficient evidence to suggest that there is an association between location of hospital ward and whether Santa visits.
 
 ## Exercise 3
+The p-value does not change when alpha changes from 0.05 to 0.01. The p-value is determined from the sample data we collected, and changing alpha would only impact when we would need to reject or fail to reject our null hypothesis based on if we have sufficient evidence or not. 
 
-The p-value does not change when alpha changes from 0.05 to 0.01 because performing a hypothesis test does not involve alpha. 
-If we knew for a fact that the alternative hypothesis was true, the power of their hypothesis test would increase as we would know that there was sufficient evidence to suggest a difference in mean BMI between low- and high-steppers, increasing the probability of rejecting the null hypothesis when it is false.
+If we knew for a fact that the alternative hypothesis was true, the power of their hypothesis test would increase as our rejection region increases when alpha increases. It would be easier to reject the null hypothesis. There would thus be an increase in the probability of correctly rejecting the null hypothesis when we obtain sufficient evidence to suggest a difference in mean BMI between low- and high-steppers. 
 
 ## Exercise 4
-To answer this question, we use the confidence interval for mu where the standard deviation is known. We know that the length of the confidence interval is equal to two times the confidence multiplier which is 2z*1/(alpha/2)xsigma/(square root of n). In solving for n, we obtain (2z*(sigma))^2. We would thus want n to be at least as big as L, which corresponds to our confidence interval length, because, to obtain a smaller confidence interval, we would need a larger value for n. 
+To answer this question, we use the confidence interval: [X-bar+z1/(alpha/2)sigma/(square root of n), X-bar-z1/(alpha/2)sigma/(square root of n)]. We know that the length L of the confidence interval is equal to X-bar+z1/(alpha/2)sigma/(square root of n) minus -X-bar-z*1/(alpha/2)xsigma/(square root of n). In solving for n, we obtain ((4z^2(1/(alpha/2))^2(sigma)^2)/L^2). We would thus want n to be at least as big as ((4z^2(1/(alpha/2))^2(sigma)^2)/L^2), because, to obtain a smaller confidence interval, we would need a larger value for n. 
 
 ## Exercise 5
-
 Holding alpha, the population variability, and the power of our intended test constant, we would need fewer participants in order to detect a larger difference between the groups.
 
 Holding the effect size, the population variability, and the power of your intended test constant, we would need more participants in order to achieve a lower type 1 error rate under the null hypothesis.
